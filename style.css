@@ -485,3 +485,11 @@ section{
     padding-right: 0px;
 }
 }
+@media only screen and (max-width:350px){
+    .sticky .sidebar-icon{
+        display: inline;
+    position: relative;
+    left: 20vw;
+    font-size: 1.6rem;
+}
+}
