@@ -37,8 +37,8 @@
     <main>
         <section class="hero">
             <div class="hero-inner">
-                <h1 data-aos="zoom-in" data-aos-duration="800"><div class="tasty">Tasty</div> Recipes</h1>
-                <p data-aos="zoom-in-down" data-aos-duration="800">The food on our menu is prepared fresh everyday. So you won't find sell <br>by dates on our fresh sandwiches and salads</p>
+                <div class="hero-head"><h1 data-aos="zoom-in" data-aos-duration="800"><div class="tasty">Tasty</div> Recipes</h1></div>
+                <div class="hero-desc"><p data-aos="zoom-in-down" data-aos-duration="800">The food on our menu is prepared fresh everyday. So you won't find sell <br>by dates on our fresh sandwiches and salads</p></div>
                 <div class="hero-btn" data-aos="zoom-in-down" data-aos-duration="800">
                     <a href="">Reservation</a>
                     <a href="">Contact</a>
@@ -92,7 +92,7 @@
                 </form>
             </div>
             <div class="contact-img">
-                <img src="restaurant.webp" width="100%" height="100%">
+                <img src="ImagesOfSite\restaurant.webp" width="100%" height="100%">
             </div>
         </section>
         <section class="info">
@@ -121,18 +121,17 @@
     </footer>
     
     <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
-    <div class="sidebar">
-        <!-- <span class="close-icon">&times;</span> -->
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">FOOD</a></li>
-            <li><a href="#">GALLERY</a></li>
-            <li><a href="#">CHEFS</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
-        <span class="close-icon">&times;</span>
-    </div>   
+<div class="sidebar">
+    <span class="close-icon">&times;</span>
+    <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">FOOD</a></li>
+        <li><a href="#">GALLERY</a></li>
+        <li><a href="#">CHEFS</a></li>
+        <li><a href="#">CONTACT</a></li>
+    </ul>
+</div> 
     <script>const sidebarIcon = document.querySelector('.sidebar-icon');
         const closeIcon = document.querySelector('.close-icon');
         const sidebarToggle = document.getElementById('sidebar-toggle');
@@ -140,12 +139,16 @@
         
         sidebarIcon.addEventListener('click', () => {
             sidebar.style.right = '0%'; // Show sidebar
+            closeIcon.style.display = 'block'; 
+            sidebar.style.display = 'block'; 
+            sidebar.style.width = 'revert-layer';
         });
         
         closeIcon.addEventListener('click', () => {
-            sidebar.style.right = '-40%'; // Hide sidebar when close icon is clicked
-            // closeIcon.style.display = 'none';
-            sidebarToggle.checked = true; // Uncheck the checkbox
+            sidebar.style.width = '0';
+            sidebar.style.display = 'none'; 
+            sidebarToggle.checked = false; // Uncheck the checkbox
+            closeIcon.style.display = 'none';
         });
         </script> 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
